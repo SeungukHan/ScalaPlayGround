@@ -96,7 +96,19 @@ object CaseClass extends App {
     assert(myPhone == yourPhone, "case class having identical value should be same")
   }
 
-  caseClassWithGuard()
+  def shortMatch(notification: Notification): Unit = {
+    notification match {
+      case _: PhoneCall => println("This is PhoneCall")
+      case _: Tweeter => println("This is Tweeter")
+      case _: Line => println("This is Line")
+      case _ => println("This is mutant")
+    }
+  }
+
+//  caseClassWithGuard()
+  candidates foreach {
+    e => shortMatch(e)
+  }
 }
 
 abstract class Notification
