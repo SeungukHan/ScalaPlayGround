@@ -1,0 +1,5 @@
+package ground
+
+class FutureRecover {
+
+}

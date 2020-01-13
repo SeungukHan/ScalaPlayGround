@@ -14,13 +14,15 @@ object Execute extends App {
     override def run(): Unit = body
   })
 
-  def executeShort(body: => Unit): Unit = executionContext.execute(() => body)
+//  def executeShort(body: => Unit): Unit = executionContext.execute(body)
 
 
   def concurrent(): Unit = {
-    for (i <- 0 until 16) execute {
-      Thread.sleep(200)
-      println(s"Task $i completed.")
+    for (i <- 0 until 16) {
+      execute {
+        Thread.sleep(200)
+        println(s"Task $i completed.")
+      }
     }
     Thread.sleep(10000)
   }
