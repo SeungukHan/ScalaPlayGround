@@ -1,2 +1,2 @@
-# ScalaPlayGround
-Scala example for study
+# scala-study
+Personal scala study
