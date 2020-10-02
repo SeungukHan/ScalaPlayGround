@@ -1,19 +1,37 @@
-*.class
-*.log
-
-# sbt specific
+# sbt
+# (may want to keep parts of 'project')
+bin/
+project/
+target/
+build/
 .cache/
 .history/
 .lib/
 dist/*
-target/
 lib_managed/
 src_managed/
 project/boot/
 project/plugins/project/
 target/*
 
-# Scala-IDE specific
-.scala_dependencies
-.worksheet
+# intellij idea
+*.log
+*.iml
+*.ipr
+*.iws
 .idea
+
+# Scala-IDE specific
+.worksheet
+
+# mac
+.DS_Store
+
+# other?
+.history
+.scala_dependencies
+.cache
+.cache-main
+
+#general
+*.class
