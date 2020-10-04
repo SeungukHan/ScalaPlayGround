@@ -36,5 +36,7 @@ class ExtractAll extends AnyFlatSpec with should.Matchers {
 
     decideCountry("000-0000-0000") should be ("Korea")
     decideCountry("00-0000-0000") should be ("Nothing...")
+
+    (0 to 10).toList.sum
   }
 }
